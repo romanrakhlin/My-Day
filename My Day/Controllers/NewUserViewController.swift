@@ -10,11 +10,6 @@ import UIKit
 import Firebase
 
 class NewUserViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
     
     @IBAction func cancelButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -49,5 +44,4 @@ class NewUserViewController: UIViewController {
         passwordFirstText.text = ""
         passwordSecondText.text = ""
     }
-    
 }

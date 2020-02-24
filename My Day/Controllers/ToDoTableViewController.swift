@@ -45,6 +45,7 @@ class ToDoTableViewController: UITableViewController, ToDoCellDelegate {
                 tableView.insertRows(at: [newIndexPath], with: .automatic)
             }
         }
+        
         ToDo.saveToDos(todos)
         updateUI()
     }
@@ -65,7 +66,6 @@ class ToDoTableViewController: UITableViewController, ToDoCellDelegate {
         }
         navigationItem.leftBarButtonItem = editButtonItem
         
-        
         Service.downloadToDoFromFirebase(self) { (downloaded) in
             if downloaded {
                 self.updateDownloadedTodos()
@@ -73,13 +73,11 @@ class ToDoTableViewController: UITableViewController, ToDoCellDelegate {
         }
     }
     
-    
     func updateDownloadedTodos() {
         todos = Service.downloadedTodo
         updateUI()
     }
 
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return !isFiltering() ? todos.count : filteredTodos.count
     }
@@ -89,6 +87,7 @@ class ToDoTableViewController: UITableViewController, ToDoCellDelegate {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CELL_IDENTIFIER) as? ToDoCell else {
             fatalError("Could not degueue a cell.")
         }
+        
         let todo = todoTable[indexPath.row]
         cell.titleLabel?.text = todo.title
         cell.isCompleteButton.isSelected = todo.isComplete
@@ -115,7 +114,6 @@ class ToDoTableViewController: UITableViewController, ToDoCellDelegate {
             let indexPath = tableView.indexPathForSelectedRow!
             let selectedTodo = !isFiltering() ? todos[indexPath.row] : filteredTodos[indexPath.row]
             todoViewController?.todo = selectedTodo
-            
         }
     }
 
@@ -127,6 +125,7 @@ class ToDoTableViewController: UITableViewController, ToDoCellDelegate {
         filteredTodos = todos.filter({ (todo: ToDo) -> Bool in
             return todo.title.lowercased().contains(searchText.lowercased())
         })
+        
         updateUI()
     }
     

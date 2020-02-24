@@ -16,6 +16,7 @@ class Service {
     let db = Firestore.firestore()
     
     static func addToDoFirebase(_ todo: ToDo) -> String? {
+        
         return Service.shared.db.collection("\(Auth.auth().currentUser!.email!)").addDocument(data: [
             "title" : todo.title,
             "isCompleted" : todo.isComplete,
@@ -32,6 +33,7 @@ class Service {
     }
     
     static func downloadToDoFromFirebase(_ controller: UIViewController, completionHandler: @escaping (Bool) -> Void) {
+        
         Service.shared.db.collection("\(Auth.auth().currentUser!.email!)").getDocuments { (querySnapshot, err) in
             if let err = err {
                 showMessage(err.localizedDescription, controller)
@@ -42,6 +44,7 @@ class Service {
                     todo.documentID = document.documentID
                     return todo
                 }
+                
                 completionHandler(true)
             }
         }
@@ -52,9 +55,9 @@ class Service {
             Service.shared.db.collection("\(Auth.auth().currentUser!.email!)").document(docID).delete()
         }
     }
-    
-    
+        
     static func autorizeFirebase(username: String, password: String, controller: UIViewController) {
+        
         Auth.auth().signIn(withEmail: username, password: password) { (user, error) in
             if error != nil {
                 showMessage(error?.localizedDescription, controller)
@@ -65,6 +68,7 @@ class Service {
     }
     
     static func createUserFirebase(username: String, password: String, controller: UIViewController) {
+        
         Auth.auth().createUser(withEmail: username, password: password) { (user, error) in
             if error != nil {
                 showMessage(error?.localizedDescription, controller)
@@ -73,6 +77,4 @@ class Service {
             }
         }
     }
-
 }
-

@@ -19,11 +19,9 @@ class ToDoCell: UITableViewCell {
     @IBOutlet weak var isCompleteButton: UIButton!
     @IBOutlet weak var titleLabel : UILabel!
   
-    
     @IBAction func completeButtonTapped(_ sender: Any) {
         delegate?.checkmarkTapped(sender: self)
     }
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,5 +33,4 @@ class ToDoCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
 }

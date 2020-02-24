@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A1E39862403E85B001B3C39 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A1E39852403E85B001B3C39 /* GoogleService-Info.plist */; };
 		3A7FA1EB23AB74F300CC6C86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7FA1EA23AB74F300CC6C86 /* AppDelegate.swift */; };
 		3A7FA1ED23AB74F300CC6C86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7FA1EC23AB74F300CC6C86 /* SceneDelegate.swift */; };
 		3A7FA1F223AB74F300CC6C86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A7FA1F023AB74F300CC6C86 /* Main.storyboard */; };
@@ -15,7 +16,6 @@
 		3A7FA1FA23AB74F800CC6C86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A7FA1F823AB74F800CC6C86 /* LaunchScreen.storyboard */; };
 		3A7FA20523AB74F800CC6C86 /* My_DayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7FA20423AB74F800CC6C86 /* My_DayTests.swift */; };
 		3A7FA21023AB74F800CC6C86 /* My_DayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7FA20F23AB74F800CC6C86 /* My_DayUITests.swift */; };
-		3A7FA22123AB77D900CC6C86 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A7FA22023AB77D900CC6C86 /* GoogleService-Info.plist */; };
 		3A7FA22323AB78E100CC6C86 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7FA22223AB78E100CC6C86 /* Const.swift */; };
 		3A7FA22923AB797600CC6C86 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7FA22423AB797500CC6C86 /* LoginViewController.swift */; };
 		3A7FA22A23AB797600CC6C86 /* NewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7FA22523AB797500CC6C86 /* NewUserViewController.swift */; };
@@ -51,6 +51,7 @@
 		145EF8F7F777D47C494CCBFB /* Pods-My Day-My DayUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My Day-My DayUITests.debug.xcconfig"; path = "Target Support Files/Pods-My Day-My DayUITests/Pods-My Day-My DayUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		14A4D729D4BC572BF882B8B4 /* Pods-My DayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My DayTests.debug.xcconfig"; path = "Target Support Files/Pods-My DayTests/Pods-My DayTests.debug.xcconfig"; sourceTree = "<group>"; };
 		21D5016505A75CAF85FF1D20 /* Pods-My DayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My DayTests.release.xcconfig"; path = "Target Support Files/Pods-My DayTests/Pods-My DayTests.release.xcconfig"; sourceTree = "<group>"; };
+		3A1E39852403E85B001B3C39 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3A7FA1E723AB74F300CC6C86 /* My Day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A7FA1EA23AB74F300CC6C86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A7FA1EC23AB74F300CC6C86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,7 +66,6 @@
 		3A7FA20B23AB74F800CC6C86 /* My DayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "My DayUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A7FA20F23AB74F800CC6C86 /* My_DayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_DayUITests.swift; sourceTree = "<group>"; };
 		3A7FA21123AB74F800CC6C86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3A7FA22023AB77D900CC6C86 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3A7FA22223AB78E100CC6C86 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		3A7FA22423AB797500CC6C86 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3A7FA22523AB797500CC6C86 /* NewUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewUserViewController.swift; sourceTree = "<group>"; };
@@ -136,16 +136,16 @@
 		3A7FA1E923AB74F300CC6C86 /* My Day */ = {
 			isa = PBXGroup;
 			children = (
-				3A7FA23323AB7AFC00CC6C86 /* View */,
-				3A7FA22E23AB7A5D00CC6C86 /* Model */,
 				3A7FA21D23AB779F00CC6C86 /* Delegates */,
 				3A7FA21E23AB77B200CC6C86 /* Controllers */,
 				3A7FA21F23AB77C000CC6C86 /* Storyboards */,
+				3A7FA23323AB7AFC00CC6C86 /* View */,
+				3A7FA22E23AB7A5D00CC6C86 /* Model */,
+				3A7FA22223AB78E100CC6C86 /* Const.swift */,
 				3A7FA1F623AB74F800CC6C86 /* Assets.xcassets */,
 				3A7FA1FB23AB74F800CC6C86 /* Info.plist */,
-				3A7FA22023AB77D900CC6C86 /* GoogleService-Info.plist */,
+				3A1E39852403E85B001B3C39 /* GoogleService-Info.plist */,
 				3A7FA1F323AB74F300CC6C86 /* My_Day.xcdatamodeld */,
-				3A7FA22223AB78E100CC6C86 /* Const.swift */,
 			);
 			path = "My Day";
 			sourceTree = "<group>";
@@ -348,7 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A7FA1FA23AB74F800CC6C86 /* LaunchScreen.storyboard in Resources */,
-				3A7FA22123AB77D900CC6C86 /* GoogleService-Info.plist in Resources */,
+				3A1E39862403E85B001B3C39 /* GoogleService-Info.plist in Resources */,
 				3A7FA1F723AB74F800CC6C86 /* Assets.xcassets in Resources */,
 				3A7FA1F223AB74F300CC6C86 /* Main.storyboard in Resources */,
 			);

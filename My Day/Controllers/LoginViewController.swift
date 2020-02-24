@@ -11,10 +11,6 @@ import Firebase
 
 class LoginViewController: UIViewController {
     
-    override func viewDidLoad() {
-
-    }
-    
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
     
@@ -39,5 +35,4 @@ class LoginViewController: UIViewController {
         emailText.text = ""
         passwordText.text = ""
     }
-    
 }

@@ -12,6 +12,7 @@ import Firebase
 struct ToDo : Codable, Comparable {
     
     static let DocumentsDirectory = FileManager.default.urls(for: .documentDirectory,in: .userDomainMask).first!
+    
     static let ArchiveURL = DocumentsDirectory.appendingPathComponent("todos").appendingPathExtension("plist")
 
     var title : String
@@ -42,8 +43,6 @@ struct ToDo : Codable, Comparable {
         let propertyListEncoder = PropertyListEncoder()
         let codedToDos = try? propertyListEncoder.encode(todos)
         try? codedToDos?.write(to: ArchiveURL, options: .noFileProtection)
-        
-        
     }
     
     static func loadSampleToDo() -> [ToDo] {

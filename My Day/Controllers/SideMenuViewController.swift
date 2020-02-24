@@ -10,12 +10,6 @@ import UIKit
 import Firebase
 
 class SideMenuViewController: UITableViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
     
     @IBAction func logOutTapped(_ sender: Any) {
         do {
@@ -27,11 +21,9 @@ class SideMenuViewController: UITableViewController {
         
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = mainStoryboard.instantiateViewController(withIdentifier: LOGIN_STORYBOARD)
+        
         UIApplication.shared.keyWindow?.rootViewController = viewController
         
         self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }
-    
-
-
 }
