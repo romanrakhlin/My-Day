@@ -4,7 +4,7 @@ This is a To Do app. It makes it very convenient to create new To Do's. The appl
 
 ## Screenshots
 
-![image](./view.jpg)
+![image](./img.jpg)
 
 ## License
 
